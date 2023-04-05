@@ -24,7 +24,6 @@ export default function Todos({ data }: { data: User[] }) {
         };
 
         const saveUser = async () => {
-          console.log(user);
           const savedUser = await userRepo.save(user);
           setUsers(users.map((t) => t === user ? savedUser : t));
         };

@@ -17,9 +17,6 @@ export default function LoginForm() {
 
   const doLogin = async () => {
     try {
-
-      console.log(JSON.stringify({...state}));
-      
       const response = await fetch("/api/login", {
         method: "POST",
         body: JSON.stringify({...state}),

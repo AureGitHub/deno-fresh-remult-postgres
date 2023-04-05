@@ -8,9 +8,8 @@ export const handler: Handlers<Task[]> = {
    
     const remult = await remultServer.getRemult(req);
 
-    let datos =await remult.repo(User).find();
+    const datos =await remult.repo(User).find();
     
-     console.log(datos);
     return ctx.render(datos);
   },
 };

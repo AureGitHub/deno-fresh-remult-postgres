@@ -2,7 +2,20 @@ import { remultFresh } from "remult/remult-fresh";
 import { Task } from "../model/task.ts";
 import { User } from "../model/user.ts";
 import { createPostgresConnection } from "https://deno.land/x/remult/postgres.ts";
-import { type ClientOptions } from "https://deno.land/x/postgres@v0.17.0/mod.ts";
+import { MiddlewareHandlerContext } from "$fresh/server.ts";
+
+
+async function logging(
+  req: Request,
+  ctx: MiddlewareHandlerContext,
+): Promise<Response> {
+
+  //const body = await req.json();
+  console.debug(req);
+  const res = await ctx.next();
+  return res;
+}
+
 
 export const remultServer = remultFresh({
   entities: [Task, User], 
@@ -22,6 +35,12 @@ export const remultServer = remultFresh({
     }
     return await undefined;
   },
+  
 }, Response);
 
-export const handler = remultServer.handle;
+
+export const handler = [
+//  logging,
+  remultServer.handle
+];
+

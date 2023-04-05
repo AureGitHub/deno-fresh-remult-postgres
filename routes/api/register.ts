@@ -5,6 +5,7 @@ export const handler: Handlers = {
   async POST(req: Request) {
     try {
       const body = await req.json();
+      console.debug('body ==> ' + body);
 
       const newUser = await faunaClient.query(
         q.Create(

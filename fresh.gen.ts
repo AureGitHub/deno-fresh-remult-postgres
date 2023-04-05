@@ -3,22 +3,21 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import config from "./deno.json" assert { type: "json" };
-import * as $0 from "./routes/[name].tsx";
-import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/_middleware.ts";
-import * as $3 from "./routes/api/joke.ts";
-import * as $4 from "./routes/api/joke.tsx";
-import * as $5 from "./routes/api/login.ts";
-import * as $6 from "./routes/api/post.ts";
-import * as $7 from "./routes/api/register.ts";
-import * as $8 from "./routes/index.tsx";
-import * as $9 from "./routes/login.tsx";
-import * as $10 from "./routes/posts/[id]/edit.tsx";
-import * as $11 from "./routes/posts/[id]/index.tsx";
-import * as $12 from "./routes/posts/new.tsx";
-import * as $13 from "./routes/signup.tsx";
-import * as $14 from "./routes/task/index.tsx";
-import * as $15 from "./routes/user/index.tsx";
+import * as $0 from "./routes/_app.tsx";
+import * as $1 from "./routes/_middleware.ts";
+import * as $2 from "./routes/api/joke.ts";
+import * as $3 from "./routes/api/joke.tsx";
+import * as $4 from "./routes/api/login.ts";
+import * as $5 from "./routes/api/post.ts";
+import * as $6 from "./routes/api/register.ts";
+import * as $7 from "./routes/index.tsx";
+import * as $8 from "./routes/login.tsx";
+import * as $9 from "./routes/posts/[id]/edit.tsx";
+import * as $10 from "./routes/posts/[id]/index.tsx";
+import * as $11 from "./routes/posts/new.tsx";
+import * as $12 from "./routes/signup.tsx";
+import * as $13 from "./routes/task/index.tsx";
+import * as $14 from "./routes/user/index.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 import * as $$1 from "./islands/LoginForm.tsx";
 import * as $$2 from "./islands/PostForm.tsx";
@@ -29,22 +28,21 @@ import * as $$6 from "./islands/userTodos.tsx";
 
 const manifest = {
   routes: {
-    "./routes/[name].tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/_middleware.ts": $2,
-    "./routes/api/joke.ts": $3,
-    "./routes/api/joke.tsx": $4,
-    "./routes/api/login.ts": $5,
-    "./routes/api/post.ts": $6,
-    "./routes/api/register.ts": $7,
-    "./routes/index.tsx": $8,
-    "./routes/login.tsx": $9,
-    "./routes/posts/[id]/edit.tsx": $10,
-    "./routes/posts/[id]/index.tsx": $11,
-    "./routes/posts/new.tsx": $12,
-    "./routes/signup.tsx": $13,
-    "./routes/task/index.tsx": $14,
-    "./routes/user/index.tsx": $15,
+    "./routes/_app.tsx": $0,
+    "./routes/_middleware.ts": $1,
+    "./routes/api/joke.ts": $2,
+    "./routes/api/joke.tsx": $3,
+    "./routes/api/login.ts": $4,
+    "./routes/api/post.ts": $5,
+    "./routes/api/register.ts": $6,
+    "./routes/index.tsx": $7,
+    "./routes/login.tsx": $8,
+    "./routes/posts/[id]/edit.tsx": $9,
+    "./routes/posts/[id]/index.tsx": $10,
+    "./routes/posts/new.tsx": $11,
+    "./routes/signup.tsx": $12,
+    "./routes/task/index.tsx": $13,
+    "./routes/user/index.tsx": $14,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

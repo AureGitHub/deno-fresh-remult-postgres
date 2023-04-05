@@ -1,4 +1,4 @@
-import { Entity, Fields } from "remult";
+import { Entity, Fields, Validators } from "remult";
 
 
 @Entity("users", {
@@ -8,17 +8,25 @@ export class User {
    @Fields.cuid()
     id:string
 
-    @Fields.string()
+    @Fields.string({
+      validate: Validators.required
+    })
     name = '';
 
-   @Fields.string()
+   @Fields.string({
+    validate: Validators.required
+  })
     email = '';
 
-   @Fields.string()
+   @Fields.string({
+    validate: Validators.required
+  })
     password = '';
 
 
-  @Fields.object()
+  @Fields.object({
+    validate: Validators.required
+  })
   perfil = Perfil.normal
   
 
