@@ -1,0 +1,1 @@
+export const inputStyle = `p-4 border-2 border-purple-400 radius rounded-md flex w-9/12`;
