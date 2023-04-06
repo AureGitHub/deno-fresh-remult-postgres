@@ -10,5 +10,12 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
+setTimeout(() => console.log("Hello, World!......................................."), 10000);
+
+console.log('ARRANCANDO........');
+
 await start(manifest, { plugins: [twindPlugin(twindConfig)] });
+
+
+
 //await start(manifest);
