@@ -20,7 +20,7 @@ export function Layout(props: Props) {
   return (
     <>
       <Head>
-        <title>Supa Fresh Auth</title>
+        <title>Titulo</title>
       </Head>
 
       <div class="bg-primary">

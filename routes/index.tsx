@@ -19,17 +19,12 @@ export default function Home(props: PageProps<ServerState>) {
         alt="the fresh logo: a sliced lemon dripping with juice"
       />
 
-      <h2>Supa Fresh Auth</h2>
+      <h2>Mi app (Aure)</h2>
 
       <p>
         An example app built with Deno's{" "}
         <Link href="https://fresh.deno.dev/" target="_blank">Fresh</Link>{" "}
-        framework, using{" "}
-        <Link href="https://supabase.com/" target="_blank">
-          Supabase
-        </Link>{" "}
-        and <Link href="https://redis.io/" target="_blank">Redis</Link>{" "}
-        to implement a simple cookie-based authentication scheme.
+        framework, 
       </p>
 
       <div class="my-4">
