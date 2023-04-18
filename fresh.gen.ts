@@ -3,55 +3,29 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import config from "./deno.json" assert { type: "json" };
-import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/_middleware.ts";
-import * as $2 from "./routes/api/joke.ts";
-import * as $3 from "./routes/api/joke.tsx";
-import * as $4 from "./routes/api/login.ts";
-import * as $5 from "./routes/api/post.ts";
-import * as $6 from "./routes/api/register.ts";
-import * as $7 from "./routes/index.tsx";
-import * as $8 from "./routes/login.tsx";
-import * as $9 from "./routes/posts/[id]/edit.tsx";
-import * as $10 from "./routes/posts/[id]/index.tsx";
-import * as $11 from "./routes/posts/new.tsx";
-import * as $12 from "./routes/signup.tsx";
-import * as $13 from "./routes/task/index.tsx";
-import * as $14 from "./routes/user/index.tsx";
-import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/LoginForm.tsx";
-import * as $$2 from "./islands/PostForm.tsx";
-import * as $$3 from "./islands/PostList.tsx";
-import * as $$4 from "./islands/SignupForm.tsx";
-import * as $$5 from "./islands/taskTodos.tsx";
-import * as $$6 from "./islands/userTodos.tsx";
+import * as $0 from "./routes/_middleware.ts";
+import * as $1 from "./routes/api/sign-in.ts";
+import * as $2 from "./routes/api/sign-out.ts";
+import * as $3 from "./routes/api/sign-up.ts";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/secret.tsx";
+import * as $6 from "./routes/sign-in.tsx";
+import * as $7 from "./routes/sign-up.tsx";
+import * as $$0 from "./islands/AuthForm.tsx";
 
 const manifest = {
   routes: {
-    "./routes/_app.tsx": $0,
-    "./routes/_middleware.ts": $1,
-    "./routes/api/joke.ts": $2,
-    "./routes/api/joke.tsx": $3,
-    "./routes/api/login.ts": $4,
-    "./routes/api/post.ts": $5,
-    "./routes/api/register.ts": $6,
-    "./routes/index.tsx": $7,
-    "./routes/login.tsx": $8,
-    "./routes/posts/[id]/edit.tsx": $9,
-    "./routes/posts/[id]/index.tsx": $10,
-    "./routes/posts/new.tsx": $11,
-    "./routes/signup.tsx": $12,
-    "./routes/task/index.tsx": $13,
-    "./routes/user/index.tsx": $14,
+    "./routes/_middleware.ts": $0,
+    "./routes/api/sign-in.ts": $1,
+    "./routes/api/sign-out.ts": $2,
+    "./routes/api/sign-up.ts": $3,
+    "./routes/index.tsx": $4,
+    "./routes/secret.tsx": $5,
+    "./routes/sign-in.tsx": $6,
+    "./routes/sign-up.tsx": $7,
   },
   islands: {
-    "./islands/Counter.tsx": $$0,
-    "./islands/LoginForm.tsx": $$1,
-    "./islands/PostForm.tsx": $$2,
-    "./islands/PostList.tsx": $$3,
-    "./islands/SignupForm.tsx": $$4,
-    "./islands/taskTodos.tsx": $$5,
-    "./islands/userTodos.tsx": $$6,
+    "./islands/AuthForm.tsx": $$0,
   },
   baseUrl: import.meta.url,
   config,
