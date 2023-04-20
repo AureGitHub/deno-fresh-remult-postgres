@@ -22,6 +22,7 @@ export function Layout(props: Props) {
       <Head>
         <title>Titulo</title>
       </Head>
+      
 
       <div class="bg-primary">
         <nav class="flex items-center justify-between flex-wrap min-h-[80px] max-w-screen-md mx-auto p-4">

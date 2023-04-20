@@ -3,8 +3,18 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { ServerState } from "routes/_middleware.ts";
 import { Layout, Link } from "components/index.ts";
 
+import {models} from "../db/denoDB/db.js"
+
+import {enumUserEstado} from "../constantes/enums.ts"
+
+
 export const handler: Handlers = {
-  GET(_req, ctx) {
+  async GET(_req, ctx) {
+    const items = await models.user.find(1);
+    console.log(items);
+    console.log(enumUserEstado[enumUserEstado.activo]);
+
+
     return ctx.render(ctx.state);
   },
 };
