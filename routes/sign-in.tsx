@@ -12,9 +12,13 @@ export const handler: Handlers = {
 
     if(errLogin){
       ctx.state.error = { code: -1, msg: 'email o password incorrecto' }
+      return ctx.render(ctx.state);
+    }
+    else{
+      return ctx.render({user: {email: 'aure.desande@gmail.com', password: 'jas11jas11'}});
     }
 
-    return ctx.render(ctx.state);
+    
   }
 }
 
@@ -32,7 +36,7 @@ export default function Page(props: PageProps<ServerState>) {
               alt="the fresh logo: a sliced lemon dripping with juice"
             />
           </div>          
-          <AuthForm mode="In" errLogin={errLogin} />
+          <AuthForm mode="In" errLogin={errLogin} user={props.data?.user} />
           
         </div>
         

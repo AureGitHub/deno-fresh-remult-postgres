@@ -1,17 +1,19 @@
 import { Head } from "$fresh/runtime.ts";
 import { ComponentChildren } from "preact";
 
-import { ServerState } from "routes/_middleware.ts";
 import { NavButton, NavLink } from "components/index.ts";
+
+import {enumUserPrefil} from "../constantes/enums.ts"
 
 type Props = {
   children: ComponentChildren;
-  state: ServerState;
+  state: any;
 };
 
 export function Layout(props: Props) {
   const isAllowed = !!props.state.user;
-  const isAdmin = props.state.user?.perfil == 'super';
+  const isSuper = props.state.user?.perfil == enumUserPrefil.super;
+  const isAdmin = props.state.user?.perfil == enumUserPrefil.admin || isSuper;
 
   const buttProps = isAllowed
     ? { href: "/api/sign-out", text: "Sign Out" }
@@ -40,7 +42,8 @@ export function Layout(props: Props) {
           <div class="flex flex-grow border-gray pt-1">
             <div class="flex flex-grow">
               {isAllowed && <NavLink href="/secret">Secret</NavLink>}
-              {isAdmin && <NavLink href="/admin">super</NavLink> }
+              {isAdmin && <NavLink href="/admin">admin</NavLink> }
+              {isSuper && <NavLink href="/admin">super</NavLink> }
 
 
 

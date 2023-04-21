@@ -1,25 +1,20 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 
-import { ServerState } from "routes/_middleware.ts";
 import { Layout, Link } from "components/index.ts";
 
-import {models} from "../db/denoDB/db.js"
+// import {models} from "../db/denoDB/db.js"
 
 import {enumUserEstado} from "../constantes/enums.ts"
 
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
-    const items = await models.user.find(1);
-    console.log(items);
-    console.log(enumUserEstado[enumUserEstado.activo]);
-
 
     return ctx.render(ctx.state);
   },
 };
 
-export default function Home(props: PageProps<ServerState>) {
+export default function Home(props: PageProps) {
   const isAllowed = !!props.data.user;
   return (
     <Layout state={props.data}>

@@ -1,6 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 
-import { ServerState } from "routes/_middleware.ts";
 import { Layout } from "components/index.ts";
 
 export const handler: Handlers = {
@@ -9,12 +8,11 @@ export const handler: Handlers = {
   }
 }
 
-export default function Secret(props: PageProps<ServerState>) {
-  console.log(props.data);
+export default function Secret(props: PageProps) {
 	return (
     <Layout state={props.data}>
       <div class="flex flex-col items-center">
-        <h2>Congrats, You've reached the secret page! {props.data.user?.name}</h2>
+        <h2>Congrats, You've reached the secret page! {props.data.user?.email}</h2>
         <p>Here's a little treat:</p>
   			<p class="text-[72px] text-align-center">🍋</p>
       </div>

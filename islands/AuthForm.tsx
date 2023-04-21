@@ -3,15 +3,18 @@ import { FormButton, Input, Link } from "components/index.ts";
 type Props = {
   mode: "In" | "Up";
   errLogin : string | null;
+  user : any | null;
 };
 
-export default function AuthForm({ mode, errLogin }: Props) {
+export default function AuthForm({ mode, errLogin, user }: Props) {
   console.log(errLogin);
   const signIn = {
     title: "Sign In",
     href: "/sign-in",
     text: "Have an account?",
   };
+
+  console.log(user);
 
   const signUp = {
     title: "Create account",
@@ -33,10 +36,12 @@ export default function AuthForm({ mode, errLogin }: Props) {
           autofocus
           type="email"
           name="email"
+          value={user.email}
         />
         <Input
           type="password"
           name="password"
+          value={user.password}
         />
 
         {errLogin && <span   class={`text-error`}>{errLogin}</span>}

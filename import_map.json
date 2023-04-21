@@ -19,7 +19,9 @@
     "https://deno.land/std/node/events.ts": "node:events",
     "https://deno.land/std/node/assert.ts": "node:assert",
     "https://deno.land/std/node/url.ts": "node:url",
-    "https://deno.land/std/node/stream.ts": "node:stream"
+    "https://deno.land/std/node/stream.ts": "node:stream",
+    "postgresjs/": "https://deno.land/x/postgresjs@v3.3.4/",
+    "djwt/": "https://deno.land/x/djwt@v2.8/"
     
   }
 }
