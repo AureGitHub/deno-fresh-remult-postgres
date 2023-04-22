@@ -17,7 +17,7 @@ export function Layout(props: Props) {
 
   const buttProps = isAllowed
     ? { href: "/api/sign-out", text: "Sign Out" }
-    : { href: "/sign-in", text: "Sign In" };
+    : { href: "/login", text: "Login" };
 
   return (
     <>

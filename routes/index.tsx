@@ -48,7 +48,7 @@ export default function Home(props: PageProps) {
       </div>
 
       {!isAllowed
-        ? <Link href="/sign-in">Sign In</Link>
+        ? <Link href="/login">Login</Link>
         : <Link href="/api/sign-out">Sign Out</Link>}
     </Layout>
   );

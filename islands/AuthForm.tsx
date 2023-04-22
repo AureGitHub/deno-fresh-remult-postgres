@@ -7,18 +7,15 @@ type Props = {
 };
 
 export default function AuthForm({ mode, errLogin, user }: Props) {
-  console.log(errLogin);
   const signIn = {
-    title: "Sign In",
-    href: "/sign-in",
+    title: "Login",
+    href: "/login",
     text: "Have an account?",
   };
 
-  console.log(user);
-
   const signUp = {
     title: "Create account",
-    href: "/sign-up",
+    href: "/api/sign-up",
     text: "No account?",
   };
 
@@ -36,19 +33,20 @@ export default function AuthForm({ mode, errLogin, user }: Props) {
           autofocus
           type="email"
           name="email"
-          value={user.email}
+          value={user?.email}
         />
         <Input
           type="password"
           name="password"
-          value={user.password}
+          value={user?.password}
         />
 
         {errLogin && <span   class={`text-error`}>{errLogin}</span>}
 
         <FormButton
           type="submit"
-          formAction={"/api" + buttProps.href}
+          //formAction={"/api" + buttProps.href}
+          formAction={buttProps.href}
           class="!mt-8"
         >
           {buttProps.title}
